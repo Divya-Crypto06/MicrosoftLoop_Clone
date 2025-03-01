@@ -7,22 +7,16 @@ import {
   ChevronRightIcon,
   DotFilledIcon,
 } from "@radix-ui/react-icons"
-
 import { cn } from "@/lib/utils"
 
 const DropdownMenu = DropdownMenuPrimitive.Root
-
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
-
 const DropdownMenuGroup = DropdownMenuPrimitive.Group
-
 const DropdownMenuPortal = DropdownMenuPrimitive.Portal
-
 const DropdownMenuSub = DropdownMenuPrimitive.Sub
-
 const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup
-
 const DropdownMenuSubTrigger = React.forwardRef(({ className, inset, children, ...props }, ref) => (
+  
   <DropdownMenuPrimitive.SubTrigger
     ref={ref}
     className={cn(
@@ -114,7 +108,6 @@ const DropdownMenuRadioItem = React.forwardRef(({ className, children, ...props 
   </DropdownMenuPrimitive.RadioItem>
 ))
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName
-
 const DropdownMenuLabel = React.forwardRef(({ className, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label
     ref={ref}
@@ -122,7 +115,6 @@ const DropdownMenuLabel = React.forwardRef(({ className, inset, ...props }, ref)
     {...props} />
 ))
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName
-
 const DropdownMenuSeparator = React.forwardRef(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator
     ref={ref}
@@ -130,7 +122,6 @@ const DropdownMenuSeparator = React.forwardRef(({ className, ...props }, ref) =>
     {...props} />
 ))
 DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName
-
 const DropdownMenuShortcut = ({
   className,
   ...props
@@ -142,7 +133,6 @@ const DropdownMenuShortcut = ({
   );
 }
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
-
 export {
   DropdownMenu,
   DropdownMenuTrigger,
