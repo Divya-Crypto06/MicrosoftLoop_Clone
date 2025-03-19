@@ -11,9 +11,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 import uuid4 from 'uuid4';
-
 function CreateWorkspace() {
-
     const [coverImage,setCoverImage]=useState('/cover.png');
     const [workspaceName,setWorkspaceName]=useState();
     const [emoji,setEmoji]=useState();
@@ -21,7 +19,6 @@ function CreateWorkspace() {
     const {orgId}=useAuth();
     const [loading,setLoading]=useState(false);
     const router=useRouter();
-
     /**
      * Used to create new workspace and save data in database
      */
@@ -47,15 +44,12 @@ function CreateWorkspace() {
             documentName:'Untitled Document',
             documentOutput:[]
         })
-
         await setDoc(doc(db,'documentOutput',docId.toString()),{
             docId:docId,
             output:[]
         })
-
         setLoading(false);
-        router.replace('/workspace/'+workspaceId+"/"+docId);
-        
+        router.replace('/workspace/'+workspaceId+"/"+docId); 
     }
   return (
     <div className='p-10 md:px-36 lg:px-64 xl:px-96 py-28'>
@@ -73,7 +67,6 @@ function CreateWorkspace() {
                     </div>
                 </div>
             </CoverPicker>
-
             {/* Input Section  */}
             <div className='p-12'>
                 <h2 className='font-medium text-xl'>Create a new workspace</h2>
